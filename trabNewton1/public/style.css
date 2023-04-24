@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #000060;
+}
+nav {
+    display: block;
+    height: 3rem;
+}
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+}
+nav li {
+    list-style-type: none;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    background-color: #0080d0;
+    width: 100%;
+}
+nav li:hover {
+    background-color: #0060a0;
+}
+nav a, nav a:visited {
+    display: block;
+    height: 100%;
+    padding: .5rem;
+}
+nav a:hover {
+    color: #ffffff;
+}
+main {
+    margin-top: 1%;
+    padding: 2%;
+}
+
+a, a:visited {
+    text-decoration: none;
+}
+a:hover {
+    color: #00a0ff;
+}
+h2 {
+    text-align: center;
+}
+input, textarea {
+    font-size: 1rem;
+    background-color: #202020;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 50vh;
+    margin: auto;
+}
+#submit {
+    background-color: #0060a0;
+    width: 50%;
+    height: 3rem;
+    margin: auto;
+    margin-top: 5%;
+}
+#submit:hover {
+    background-color: #005080;
+}
+
+#byNameContainer {
+    display: flex;
+    flex-direction: column;
+}
+#byIdContainer {
+    display: none;
+    flex-direction: column;
+}

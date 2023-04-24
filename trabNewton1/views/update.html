@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../public/style.css" />
+        <title>Editar Produto</title>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./add.html">Cadastrar Produto</a></li>
+                <li><a href="./update.html">Editar Produto</a></li>
+                <li><a href="./remove.html">Remover Produto</a></li>
+                <li><a href="../view.php">Vizualizar Produtos</a></li>
+            </ul>
+        </nav>
+        <main>
+            <form action="../update.php" method="post">
+                <h2>Editar Produto</h2>
+                <h3>Deixe em branco caso não deseje editar.</h3>
+                <div>
+                    <label for="byId">Usar id</label>
+                    <input id="byId" type="checkbox" name="byId" />
+                </div>
+                <div id="byIdContainer">
+                    <label for="id">Id do produto:</label>
+                    <input id="id" type="number" name="id" min="1" step="1" placeholder="Id do produto" />
+                </div>
+                <label for="name">Nome do produto:</label>
+                <input id="name" type="text" name="name" minlength="2" maxlength="60" placeholder="Nome do produto" autofocus />
+                <label for="description">Descrição do produto:</label>
+                <textarea id="description" name="description" cols="30" rows="10" maxlength="120" placeholder="Descrição do produto"></textarea>
+                <label for="quantity">Quantidade em estoque do produto:</label>
+                <input id="quantity" type="number" name="quantity" placeholder="Quantidade em estoque do produto" />
+                <label for="price">Preço do produto:</label>
+                <input id="price" type="number" name="price" step="0.01" placeholder="Preço do produto" />
+                <button id="submit" type="submit">Atualizar produto</button>
+            </form>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../public/style.css" />
+        <title>Remover Produto</title>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./add.html">Cadastrar Produto</a></li>
+                <li><a href="./update.html">Editar Produto</a></li>
+                <li><a href="./remove.html">Remover Produto</a></li>
+                <li><a href="../view.php">Vizualizar Produtos</a></li>
+            </ul>
+        </nav>
+        <main>
+            <form action="../remove.php" method="post">
+                <h2>Remover Produto</h2>
+                <div>
+                    <label for="byId">Usar id</label>
+                    <input id="byId" type="checkbox" name="byId" />
+                </div>
+                <div id="byNameContainer">
+                    <label for="name">Nome do produto:</label>
+                    <input id="name" type="text" name="name" minlength="2" maxlength="60" placeholder="Nome do produto" autofocus />
+                </div>
+                <div id="byIdContainer">
+                    <label for="id">Id do produto:</label>
+                    <input id="id" type="number" name="id" min="1" step="1" placeholder="Id do produto" />
+                </div>
+                <button id="submit" type="submit">Remover produto</button>
+            </form>
+        </main>
+    </body>
+</html>
