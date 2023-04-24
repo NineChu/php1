@@ -18,14 +18,14 @@
             </ul>
         </nav>
         <main>
-            <h2>Vizualizar Produtos</h2>
+            <h1>Vizualizar Produtos</h1>
             <?php
             include 'connection.php';
             
             $query = $connection->query('select * from products');
             if ($query->num_rows > 0) {
                 $query = $query->fetch_all(MYSQLI_ASSOC);
-                echo '<table><th>Id</th><th>Nome</th><th>Descrição</th><th>Quantidade em estoque</th><th>Preço</th><th>Criado em</th><th>Atualizado em</th>';
+                echo '<table><tr><th>Id</th><th>Nome</th><th>Descrição</th><th>Quantidade em estoque</th><th>Preço</th><th>Criado em</th><th>Atualizado em</th></tr>';
                 foreach ($query as $i) {
                     echo '<tr><td>' . $i['id'] . '</td><td>'
                     . $i['name'] . '</td><td>'
@@ -37,7 +37,7 @@
                 }
                 echo '</table>';
             } else {
-                echo '0 results';
+                echo '<h2>0 results</h2>';
             }
             ?>
         </main>

@@ -11,9 +11,9 @@ $query = 'create table products(
     updated_at datetime default current_timestamp on update current_timestamp,
     primary key(id)
     );';
-// if ($connection->query($query) === TRUE) {
-//     echo 'Database updated';
-// } else {
-//     echo 'Query error (' . $connection->errno . '): ' . $connection->error;
-// }
+if ($connection->query($query) === TRUE) {
+    echo 'Database updated';
+} else {
+    echo 'Query error (' . $connection->errno . '): ' . $connection->error;
+}
 ?>

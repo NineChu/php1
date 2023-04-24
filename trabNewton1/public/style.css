@@ -49,7 +49,7 @@ a, a:visited {
 a:hover {
     color: #00a0ff;
 }
-h2 {
+h1, h2 {
     text-align: center;
 }
 input, textarea {
@@ -74,11 +74,17 @@ form {
     background-color: #005080;
 }
 
-#byNameContainer {
-    display: flex;
-    flex-direction: column;
+table, th, tr, td {
+    border: 2px solid #ffffff;
 }
-#byIdContainer {
-    display: none;
-    flex-direction: column;
+table {
+    text-align: center;
+    border-collapse: collapse;
+    margin: auto;
+}
+th, td {
+    width: calc(100%/7);
+}
+th {
+    padding: .3rem;
 }

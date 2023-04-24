@@ -19,18 +19,12 @@
         </nav>
         <main>
             <form action="../update.php" method="post">
-                <h2>Editar Produto</h2>
+                <h1>Editar Produto</h1>
                 <h3>Deixe em branco caso não deseje editar.</h3>
-                <div>
-                    <label for="byId">Usar id</label>
-                    <input id="byId" type="checkbox" name="byId" />
-                </div>
-                <div id="byIdContainer">
-                    <label for="id">Id do produto:</label>
-                    <input id="id" type="number" name="id" min="1" step="1" placeholder="Id do produto" />
-                </div>
+                <label for="id">Id do produto:</label>
+                <input id="id" type="number" name="id" min="1" step="1" placeholder="Id do produto" autofocus required />
                 <label for="name">Nome do produto:</label>
-                <input id="name" type="text" name="name" minlength="2" maxlength="60" placeholder="Nome do produto" autofocus />
+                <input id="name" type="text" name="name" minlength="2" maxlength="60" placeholder="Nome do produto" />
                 <label for="description">Descrição do produto:</label>
                 <textarea id="description" name="description" cols="30" rows="10" maxlength="120" placeholder="Descrição do produto"></textarea>
                 <label for="quantity">Quantidade em estoque do produto:</label>

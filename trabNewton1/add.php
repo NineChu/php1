@@ -24,7 +24,7 @@ foreach ($_POST as $key => $value) {
 $query .= ');';
 
 if ($connection->query($query) === TRUE) {
-    echo 'Database updated';
+    header('location:' . str_replace('add.php', 'view.php', $_SERVER['PHP_SELF']));
 } else {
     echo 'Query error (' . $connection->errno . '): ' . $connection->error;
 }
